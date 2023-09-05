@@ -6,7 +6,27 @@ module.exports = class Contador{
     }
 
     mapear(cadena){
-        this.mapita[cadena] = 1;
+
+        let palabra = "";
+
+        for(let i = 0; i < cadena.length; i++){
+            if(cadena[i]==' ' ||cadena[i]==',' ){
+
+                if(isNaN(this.mapita[palabra])){
+                    this.mapita[palabra] = 0;
+                }
+                this.mapita[palabra]++;
+                console.log(this.mapita[palabra]);
+                palabra = "";
+            }else palabra+=cadena[i];
+        }
+
+        if(isNaN(this.mapita[palabra])){
+            this.mapita[palabra] = 0;
+        }
+        this.mapita[palabra]++;
+
+
     }
 
     verificarOcurrencias(palabras, cantidad){
