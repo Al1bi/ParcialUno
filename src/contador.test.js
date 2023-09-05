@@ -24,4 +24,12 @@ describe("Contador de ocurrencias", () => {
     expect(cont.verificarOcurrencias(palabras, cantidad)).toEqual(true);
   });
 
+  it(" La frase \"denilson, DENILSON\", retorna ocurrencias -> denilson: 2 ", () => {
+    const cont = new Contador("DENILSON, denilson");
+    let palabras = ["denilson"];
+    let cantidad = [2];
+
+    expect(cont.verificarOcurrencias(palabras, cantidad)).toEqual(true);
+  });
+
 });

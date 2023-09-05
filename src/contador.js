@@ -12,17 +12,16 @@ module.exports = class Contador{
         for(let i = 0; i < cadena.length; i++){
             if(cadena[i]==' ' ||cadena[i]==',' ){
 
-                if(isNaN(this.mapita[palabra])){
-                    this.mapita[palabra] = 0;
+                if(isNaN(this.mapita[palabra.toLowerCase()])){
+                    this.mapita[palabra.toLowerCase()] = 0;
                 }
-                this.mapita[palabra]++;
-                console.log(this.mapita[palabra]);
+                this.mapita[palabra.toLowerCase()]++;
                 palabra = "";
             }else palabra+=cadena[i];
         }
 
-        if(isNaN(this.mapita[palabra])){
-            this.mapita[palabra] = 0;
+        if(isNaN(this.mapita[palabra.toLowerCase()])){
+            this.mapita[palabra.toLowerCase()] = 0;
         }
         this.mapita[palabra]++;
 
