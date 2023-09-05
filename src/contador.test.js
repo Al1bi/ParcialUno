@@ -32,4 +32,19 @@ describe("Contador de ocurrencias", () => {
     expect(cont.verificarOcurrencias(palabras, cantidad)).toEqual(true);
   });
 
+  it(" La frase \"denilson fiesta inocente\", retorna ocurrencias -> denilson: 1, fiesta: 1, inocente:1 ", () => {
+    const cont = new Contador("denilson fiesta inocente");
+    let palabras = ["denilson", "fiesta", "inocente"];
+    let cantidad = [1, 1, 1];
+
+    expect(cont.verificarOcurrencias(palabras, cantidad)).toEqual(true);
+  });
+  it(" La frase \"denilson-fiesta-inocente\", retorna ocurrencias -> denilson: 1, fiesta: 1, inocente:1 ", () => {
+    const cont = new Contador("denilson-fiesta-inocente");
+    let palabras = ["denilson", "fiesta", "inocente"];
+    let cantidad = [1, 1, 1];
+
+    expect(cont.verificarOcurrencias(palabras, cantidad)).toEqual(true);
+  });
+
 });

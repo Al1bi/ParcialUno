@@ -10,7 +10,7 @@ module.exports = class Contador{
         let palabra = "";
 
         for(let i = 0; i < cadena.length; i++){
-            if(cadena[i]==' ' ||cadena[i]==',' ){
+            if(cadena[i]==' ' ||cadena[i]==',' ||cadena[i]=='-' ||cadena[i]==';' ||cadena[i]=='.' ){
 
                 if(isNaN(this.mapita[palabra.toLowerCase()])){
                     this.mapita[palabra.toLowerCase()] = 0;
