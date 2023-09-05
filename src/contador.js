@@ -30,7 +30,7 @@ module.exports = class Contador{
 
     verificarOcurrencias(palabras, cantidad){
         for(let i = 0; i < palabras.length; i++){
-            if( this.mapita[palabras[i]] != cantidad[i]) return false;
+            if( this.mapita[palabras[i].toLowerCase()] != cantidad[i]) return false;
         }
         return true;
     }

@@ -47,4 +47,12 @@ describe("Contador de ocurrencias", () => {
     expect(cont.verificarOcurrencias(palabras, cantidad)).toEqual(true);
   });
 
+  it(" La frase \"El password de mi cuenta es PASSWORD. Es un password de poco cuidado\", retorna ocurrencias -> El: 1, password: 3, de:2, mi:1, cuenta:1, es:2, un: 1, poco:1, cuidado:1 ", () => {
+    const cont = new Contador("El password de mi cuenta es PASSWORD. Es un password de poco cuidado");
+    let palabras = ["El", "password", "de", "mi", "cuenta", "es", "un", "poco", "cuidado"];
+    let cantidad = [1, 3, 2, 1, 1, 2, 1, 1, 1];
+
+    expect(cont.verificarOcurrencias(palabras, cantidad)).toEqual(true);
+  });
+
 });
